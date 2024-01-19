@@ -4,15 +4,18 @@ import { faGithub, faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-ico
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import '../App.css';
 
-const iconStyle = {
-  border: '3px solid white',
-  borderRadius: '50%',
-  padding: 10,
-}
+
+
+// ... (il codice rimane invariato)
+
+
+
+
 function MyNavbar() {
   return (
-    <Navbar expand="lg" className="navbar-dark bg-dark">
+    <Navbar expand="lg" className="navbar-dark bg-dark padding-navbar">
       <Container>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -22,14 +25,26 @@ function MyNavbar() {
             <Nav.Link href="#link">Link</Nav.Link>
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link style={iconStyle} href="https://github.com/AndroLuix" target="_blank" rel="noopener noreferrer"  >
-              <FontAwesomeIcon icon={faGithub}  className='fa-2xl'/>
+            <Nav.Link
+              href="https://github.com/AndroLuix"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub}  className="fa-2xl icon-link" />
             </Nav.Link>
-            <Nav.Link style={iconStyle} href="https://gitlab.com/luigiAdro" target="_blank" rel="noopener noreferrer" >
-              <FontAwesomeIcon icon={faGitlab}  className='fa-2xl'/>
+            <Nav.Link
+              href="https://gitlab.com/luigiAdro"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon  icon={faGitlab} className="fa-2xl icon-link" />
             </Nav.Link>
-            <Nav.Link style={iconStyle} href="https://www.linkedin.com/in/luigi-iadicola/" target="_blank" rel="noopener noreferrer" >
-              <FontAwesomeIcon icon={faLinkedin} className='fa-2xl' />
+            <Nav.Link
+              href="https://www.linkedin.com/in/luigi-iadicola/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="fa-2xl icon-link" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

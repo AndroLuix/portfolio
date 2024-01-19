@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+/* My style */
+
+.icon-link {
+  border: 3px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+  background-color: transparent;
+  transition: background-color 1.5s ease, margin 1s;
+}
+
+.icon-link:hover {
+  background-color: #ffffff;
+  margin: 5px 10px;
+  color: rgb(3, 3, 3); /* Aggiungi questo se desideri modificare anche il colore del testo durante l'hover */
+}
+
+.padding-navbar {
+  padding: 30px;
+  margin: 10px;
+  border-radius: 20px;
+  transition: none; /* Rimuovi eventuali transizioni dalla navbar */
+}
