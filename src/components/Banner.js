@@ -9,6 +9,11 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import ImgJs from "../asset/img/js.png"
 import ImgMySQL from "../asset/img/mysql.png"
 import ImgHtmlCss from "../asset/img/html-css.png"
+import PHP from "../asset/img/php.png"
+import imgJava from "../asset/img/java.png"
+import ImgSpring from "../asset/img/spring.png"
+import imgLaravel from "../asset/img/laravel.png"
+import imgReact from "../asset/img/react.png"
 import { faL } from '@fortawesome/free-solid-svg-icons';
 
 // ... (il codice rimane invariato)
@@ -17,6 +22,9 @@ import { faL } from '@fortawesome/free-solid-svg-icons';
 
 function Banner() {
 
+    /**
+     * FUNZIONE PER IL GENERATORE DI TESTO
+     */
     const toRotate = ["Frontend Developer",
         "Backend Developer", "App Developer", "Database Developer"]
     const [looopNum, setLoopNum] = useState(0);
@@ -75,6 +83,9 @@ function Banner() {
 
         }
     }
+
+
+    
     return (
         <section className='banner bg-dark text-white' id='home'>
             <Container>
@@ -92,10 +103,16 @@ function Banner() {
 
                     <Col  xs={7} md={3} xl={6}>
                     <Row className='d-flex flex-wrap'>
+                            
                             <img  className='img-skills' src={ImgJs} alt='Js' />
                             <img className='img-skills' src={ImgMySQL} alt='MySQL' />
                             <img  className='img-skills' src={ImgHtmlCss} alt='HTML CSS' />
-                            <img  className='img-skills' src={ImgHtmlCss} alt='PHP' />
+                            <img  className='img-skills' src={PHP} alt='PHP' />
+                            <img  className='img-skills' src={imgJava} alt='java' />
+                            <img  className='img-skills' src={ImgSpring} alt='Spirngboot' />
+                            <img  className='img-skills' src={imgLaravel} alt='Laravel' />
+                            <img  className='img-skills' src={imgReact} alt='React' />
+
                         </Row>
                     </Col>
 
