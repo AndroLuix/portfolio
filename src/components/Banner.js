@@ -30,7 +30,7 @@ function Banner() {
     const [looopNum, setLoopNum] = useState(0);
     const [isDeleting, setiIsDeleting] = useState(false);
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300 - Math.random() * 100)
+    const [delta, setDelta] = useState(300 - Math.random() * 14440)
     const period = 2000; //tempo per rimanere la frase sullo schhermo
 
     useEffect(() => {
@@ -65,18 +65,17 @@ function Banner() {
 
         // se la frase è cancellata
         if (isDeleting) {
-            //velocità di scrittura e cancellazione
-            setDelta(prevDelta => prevDelta / 2)
+            setDelta(prevDelta => prevDelta / 1.3)
         }
 
-        //gestione del cambio di direzione del cursore
+        //gestione del cambio di direzione del cursore 
         if (!isDeleting && updateText === fullText) {
             setiIsDeleting(true);
-            setDelta(period);
+            setDelta(period); //cancellazione
 
         } else if (isDeleting && updateText === '') {
             setiIsDeleting(false);
-            setDelta(500);
+            setDelta(500); //velocità scrittura
 
             // inncremento l'indice per accedere al prossimo testo nell'array toRotate
             setLoopNum((prevNum) => prevNum + 1)
@@ -90,7 +89,7 @@ function Banner() {
         <section className='banner bg-dark text-white' id='home'>
             <Container>
                 <Row className='align-items-center '>
-                    <Col xs={7} md={3} xl={6} >
+                    <Col xs={9} md={6} xl={6} >
                         <span className='tagline'> Benvenuto nel mio Portfolio</span>
                         <h1 className='text-skills'>{`Le mie competenze e specializzazioni: `}
                             <span className='wrap'> {text}<span className='line-text'>|</span></span>
@@ -101,7 +100,7 @@ function Banner() {
                         </h1>
                     </Col>
 
-                    <Col  xs={7} md={3} xl={6}>
+                    <Col  xs={9} md={7} xl={6}>
                     <Row className='d-flex flex-wrap'>
                             
                             <img  className='img-skills' src={ImgJs} alt='Js' />
