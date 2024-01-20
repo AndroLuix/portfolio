@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faGithub, faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -6,17 +7,12 @@ import '../App.css';
 import { Row, Col } from 'react-bootstrap';
 
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import ImgJs from "../asset/img/js.png"
-import ImgMySQL from "../asset/img/mysql.png"
-import ImgHtmlCss from "../asset/img/html-css.png"
-import PHP from "../asset/img/php.png"
-import imgJava from "../asset/img/java.png"
-import ImgSpring from "../asset/img/spring.png"
-import imgLaravel from "../asset/img/laravel.png"
-import imgReact from "../asset/img/react.png"
-import { faL } from '@fortawesome/free-solid-svg-icons';
 
-// ... (il codice rimane invariato)
+import gifAtom from '../asset/img/gif/atom.gif'; //la gif dell'atomo
+
+
+
+import Atom from './Atom';
 
 
 
@@ -84,36 +80,28 @@ function Banner() {
     }
 
 
-    
+
     return (
         <section className='banner bg-dark text-white' id='home'>
             <Container>
-                <Row className='align-items-center '>
+                <Row className='align-items-center'>
                     <Col xs={9} md={6} xl={6} >
                         <span className='tagline'> Benvenuto nel mio Portfolio</span>
                         <h1 className='text-skills'>{`Le mie competenze e specializzazioni: `}
                             <span className='wrap'> {text}<span className='line-text'>|</span></span>
-                            <p>Prova prova prova</p>
+                            <p><li>Software Engineer</li></p>
                             <button onClick={() => console.log('connesso')}>
                                 Let's Connect <ArrowRightCircle size={24} />
                             </button>
                         </h1>
                     </Col>
 
-                    <Col  xs={9} md={7} xl={6}>
-                    <Row className='d-flex flex-wrap'>
-                            
-                            <img  className='img-skills' src={ImgJs} alt='Js' />
-                            <img className='img-skills' src={ImgMySQL} alt='MySQL' />
-                            <img  className='img-skills' src={ImgHtmlCss} alt='HTML CSS' />
-                            <img  className='img-skills' src={PHP} alt='PHP' />
-                            <img  className='img-skills' src={imgJava} alt='java' />
-                            <img  className='img-skills' src={ImgSpring} alt='Spirngboot' />
-                            <img  className='img-skills' src={imgLaravel} alt='Laravel' />
-                            <img  className='img-skills' src={imgReact} alt='React' />
-
-                        </Row>
+                    {/*GIF DELL'ATOMO*/}
+                    <Col xs={9} md={7} xl={6}>
+                        <Atom />
                     </Col>
+
+
 
                 </Row>
             </Container>

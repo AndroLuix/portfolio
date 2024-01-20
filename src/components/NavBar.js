@@ -17,7 +17,7 @@ function MyNavbar() {
   return (
     <Navbar expand="lg" className="navbar-dark bg-dark padding-navbar">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

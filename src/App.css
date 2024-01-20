@@ -1,45 +1,34 @@
-.App {
-  text-align: center;
-}
-
-
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /* My style */
+/* 
+BARRA DI SCORRIMENTO
+*/
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
 
+/* Nascondi la barra di scorrimento standard */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* Stile della barra di scorrimento */
+body::-webkit-scrollbar {
+  width: 12px; /* Larghezza della barra di scorrimento */
+  background-color: #000000;
+}
+
+/* Stile del "thumb" (il rettangolo scorrevole) */
+body::-webkit-scrollbar-thumb {
+  background-color: #4285f4; /* Colore dello sfondo del thumb */
+  border-radius: 6px; /* Arrotondamento dei bordi del thumb */
+  border: 3px solid #000000; /* Bordo del thumb */
+}
+
+/*
+NAVBAR 
+*/
 .icon-link {
   border: 3px solid white;
   border-radius: 50%;
@@ -52,7 +41,8 @@
 .icon-link:hover {
   background-color: #ffffff;
   margin: 5px 10px;
-  color: rgb(3, 3, 3); /* Aggiungi questo se desideri modificare anche il colore del testo durante l'hover */
+  color: rgb(3, 3, 3);
+  /* Aggiungi questo se desideri modificare anche il colore del testo durante l'hover */
 }
 
 
@@ -62,11 +52,12 @@
 --------------------*/
 .banner {
   margin-top: 0;
-  padding: 260px 0 10px 0;
+  padding: 200px 0 10px 0;
   background-image: url('./asset/img/banner-bg.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 20%;
 }
 
 .banner .tagline {
@@ -81,6 +72,7 @@
   display: inline-block;
   border-radius: 15px 50px 30px;
 }
+
 /* Stili per smartphone */
 @media (max-width: 767px) {
   .banner .tagline {
@@ -100,14 +92,16 @@
   margin-bottom: 20px;
   display: block;
 }
+
 @media (max-width: 767px) {
   .banner h1 {
-    font-size: 20px; 
-    margin-bottom: 10px; 
+    font-size: 20px;
+    margin-bottom: 10px;
     margin-left: 50px;
     margin-top: 20px;
   }
 }
+
 .banner p {
   color: #B8B8B8;
   font-size: 18px;
@@ -115,6 +109,7 @@
   line-height: 1.5em;
   width: 96%;
 }
+
 .banner button {
   color: #fff;
   font-weight: 700;
@@ -124,52 +119,62 @@
   display: flex;
   align-items: center;
 }
+
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
+
 .banner button:hover svg {
   margin-left: 25px;
 }
 
 /* image effect */
 .banner img {
-  max-width: 45%;
-  margin: 10px;
   animation: updown 3s linear infinite;
-  border: solid 2px rgba(237, 237, 230, 0.57);
-  border-radius: 50px ;
-  padding: 50px;
-  background-color: #ffffff5c;
+  position: relative;
+  border-radius: 50px;
+  animation: rotate 4s linear infinite;
+  animation: updown 4s linear infinite;
 }
+
+@keyframes rotate {
+  to {
+    transform: rotate(365deg);
+  }
+
+}
+@keyframes updown {
+  0% {
+    transform: translateY(-40px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+
 /* Stili per smartphone */
 @media (max-width: 767px) {
   .banner img {
-    max-width: 100%;    
+    max-width: 100%;
     padding: 20px;
     margin-left: 50px;
     border-radius: 20px;
-    animation: none; /* Disabilita l'animazione per gli smartphone */
+    animation: none;
+    /* Disabilita l'animazione per gli smartphone */
 
   }
 }
 
-/* img skills */
 
-
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
-}
 
 
 /*input*/
@@ -182,19 +187,20 @@
 }
 
 @keyframes line-input {
-  from{
+  from {
     color: transparent;
   }
-  to{
+
+  to {
     color: white;
   }
 }
 
-.text-skills{
+.text-skills {
   background: linear-gradient(90.21deg, rgba(215, 121, 177, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: 1px solid rgba(67, 45, 45, 0.5);
   border-radius: 10%;
-  width:100%;
+  width: 100%;
   padding: 20px;
 
 }
@@ -202,7 +208,69 @@
 /* Stili per smartphone */
 @media (max-width: 767px) {
   .text-skills {
-    padding: 15px; /* Riduci il padding per adattarlo meglio a uno schermo più piccolo */
+    padding: 15px;
+    /* Riduci il padding per adattarlo meglio a uno schermo più piccolo */
     width: 100%;
   }
+}
+
+
+/*---------------------------
+    SKILLS FRAME
+---------------------*/
+.img-skills {
+  border-radius: 50px;
+  padding: 50px;
+  width: 250px;
+  border: solid 1px white;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px;
+  transition: border 1.5s ease, padding 1s, margin 0.5s, border-radius 2s, width 2s;
+
+}
+.img-skills:hover{
+  border: solid 5px wheat;
+  padding: 10px;
+  border-radius: 0;
+  width: 300px;
+
+}
+
+
+.scroll-skills {
+
+  display: flex;
+  flex-direction: row;
+
+
+}
+.img-description-skill {
+  background-color: none;
+  color: transparent;
+  padding: 0px;
+  border-radius: 30px;
+  width: min-content;
+  margin: 50px;
+  cursor: pointer;
+  color: white;
+  font-weight: 400;
+
+
+  transition: padding 0.2s, background-color 2s, color 0.5s, width 4s ease-in-out, margin, font-weight 1s ease-in-out;
+}
+
+ .img-description-skill:hover {
+  background-color: #aa0f7633;
+  font-weight: 600;
+  
+}
+ 
+.img-description{
+  margin: auto;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 30px;
+  width: 200px;
+  transition: color 2s;
 }
