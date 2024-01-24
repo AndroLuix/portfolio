@@ -89,9 +89,9 @@ function Banner() {
                         <span className='tagline'> Benvenuto nel mio Portfolio</span>
                         <h1 className='text-skills'>{`Le mie competenze e specializzazioni: `}
                             <span className='wrap'> {text}<span className='line-text'>|</span></span>
-                            <p><li>Software Engineer</li></p>
+                            <p>Software Engineer</p>
                             <button onClick={() => console.log('connesso')}>
-                                Let's Connect <ArrowRightCircle size={24} />
+                                Visualizza Progetti <ArrowRightCircle size={24} />
                             </button>
                         </h1>
                     </Col>

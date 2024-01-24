@@ -1,0 +1,142 @@
+
+/*---------------------------
+    SKILLS FRAME
+---------------------*/
+.skills{
+    text-align: center;
+}
+
+
+/* scrollbar */
+.skills .col{
+     
+/*     background: linear-gradient(90.21deg, rgba(215, 121, 177, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+ */   
+    border-radius: 10px;    
+    padding: 5px;
+    display: flex;
+    justify-content: center ;
+}
+
+
+
+.skills h1{
+    color: wheat;
+   padding: 10px 10px;
+   padding-bottom: 0px;
+   font-weight: 500;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.777) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100;
+    margin-bottom: 16px;
+    display: inline-block;
+    border-radius: 15px 50px 30px;
+    margin: 20px;
+}
+
+
+.img-skills {
+    border-radius: 50px;
+    width: 100px;
+    border: solid 1px white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0;
+    transition: border 1.5s ease, padding 1s, margin 0.5s, border-radius 2s, width 2s;
+  
+  }
+
+
+  .img-skills:hover{
+    border: solid 5px wheat;
+    padding: 10px;
+    border-radius: 0;
+    width: 120px;
+    
+  }
+
+  .scroll-skills {
+  
+    display: flex;
+    flex-direction: row;
+  
+  
+  }
+  .img-description-skill {
+    width: auto;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.777) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    height: min-content;
+
+    color: transparent;
+    padding: 0px;
+    border-radius: 20px;
+    margin: 50px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600px;
+  
+  
+    transition: padding 0.2s, background-color ease-in 1s, color 0.5s, height 1s, width 4s ease-in-out, margin, border-radius 1s;
+    transition-timing-function: linear;
+  }
+  
+   .img-description-skill:hover {
+    background-color: #aa0f7633;
+    background-size: cover;
+    height: min-content;
+    border-radius: 20px;
+
+    
+    
+  }
+  img.img-description-skill::before{
+    border-radius: 20px;
+
+  }
+   
+  .img-description{
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 1000px;
+    display: block;
+    font-size: 30px;
+    width: 400px;
+    transition: color 2s;
+    float:right;
+  }
+
+  @media screen and (max-width: 767px) {
+    /* Stile per schermi con larghezza massima di 767px (tipicamente smartphone) */
+    .img-skills{
+        width: 100px;
+    }
+    .img-description {
+      font-size: 16px; /* Modifica la dimensione del testo per adattarsi allo schermo più piccolo */
+      width: min-content;
+
+      width: auto; /* Larghezza automatica per adattarsi alla larghezza dello schermo */
+      float: none; /* Rimuovi il float per evitare problemi di layout su schermi più piccoli */
+    }
+
+    .img-description-skill {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.527);
+        height: min-content;
+
+    
+        color: transparent;
+        padding: 0px;
+        border-radius: 20px;
+        margin: 10px 50px;
+        color: white;
+        font-weight: 600px;
+      
+      
+        transition: padding 0.2s, background-color ease-in 1s, color 0.5s, height 1s, width 4s ease-in-out, margin, border-radius 1s;
+        transition-timing-function: linear;
+      }
+      
+  }
