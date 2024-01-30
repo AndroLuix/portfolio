@@ -7,13 +7,7 @@ import '../App.css';
 import { Row, Col } from 'react-bootstrap';
 
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-
-import gifAtom from '../asset/img/gif/atom.gif'; //la gif dell'atomo
-
-
-
-import Atom from './Atom';
-
+import Logo from '../asset/img/bgLogo/prog.png';
 
 
 function Banner() {
@@ -89,16 +83,15 @@ function Banner() {
                         <span className='tagline'> Benvenuto nel mio Portfolio</span>
                         <h1 className='text-skills'>{`Le mie competenze e specializzazioni: `}
                             <span className='wrap'> {text}<span className='line-text'>|</span></span>
-                            <p>Software Engineer</p>
                             <button onClick={() => console.log('connesso')}>
-                                Visualizza Progetti <ArrowRightCircle size={24} />
+                                Visualizza Progetti <ArrowRightCircle size={30} />
                             </button>
                         </h1>
                     </Col>
 
-                    {/*GIF DELL'ATOMO*/}
+                    {/*Logo*/}
                     <Col xs={9} md={7} xl={6}>
-                        <Atom />
+                         <img src={Logo} alt='logo' />
                     </Col>
 
 
