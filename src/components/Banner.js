@@ -12,6 +12,11 @@ import Logo from '../asset/img/bgLogo/prog.png';
 
 function Banner() {
 
+    // funzione per mostrare la pagina di github
+    const handleButtonClick = () => {
+        window.open('https://github.com/AndroLuix?tab=repositories', '_blank');
+    };
+
     /**
      * FUNZIONE PER IL GENERATORE DI TESTO
      */
@@ -49,6 +54,8 @@ function Banner() {
         //aggiorno lo stato del testo
         setText(updateText);
 
+
+
         /**
          * Condizioni e regole
          */
@@ -71,6 +78,8 @@ function Banner() {
             setLoopNum((prevNum) => prevNum + 1)
 
         }
+       
+       
     }
 
 
@@ -83,15 +92,17 @@ function Banner() {
                         <span className='tagline'> Benvenuto nel mio Portfolio</span>
                         <h1 className='text-skills'>{`Le mie competenze e specializzazioni: `}
                             <span className='wrap'> {text}<span className='line-text'>|</span></span>
-                            <button onClick={() => console.log('connesso')}>
-                                Visualizza Progetti <ArrowRightCircle size={30} />
-                            </button>
+                                <button onClick={handleButtonClick}>
+                                    Visualizza Progetti <ArrowRightCircle size={30} />
+                                </button>
+                                
+                          
                         </h1>
                     </Col>
 
                     {/*Logo*/}
                     <Col xs={9} md={7} xl={6}>
-                         <img src={Logo} alt='logo' />
+                        <img src={Logo} alt='logo' />
                     </Col>
 
 
